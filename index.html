@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task_2_5</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+		<div class="wrapper">
+			<header class="header">
+				<img class="header__logo" src="img/logo.svg" alt="logo" />
+			</header>
+			<form id="createTask" class="create_task">
+				<input
+					type="text"
+					id="inputTask"
+					class="input__task"
+					placeholder="Please input your next task"
+				/>
+				<button type="submit" id="editTask" class="edit__task">Edit</button>
+				<p id="alertInput" class="alert__input"></p>
+			</form>
+			<section id="tasksContainer" class="tasks__container">
+				<div id="tasksList" class="tasks__list"></div>
+			</section>
+			<footer id="cleanItems" class="clean__items">
+				<button id="cleanItemsBtn" class="clean__items_btn">
+					<img
+						class="clean__items_icon"
+						src="img/garbage_can.svg"
+						alt="garbage_can"
+					/>
+					<p>CLEAN ITEMS</p>
+				</button>
+			</footer>
+		</div>    
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
