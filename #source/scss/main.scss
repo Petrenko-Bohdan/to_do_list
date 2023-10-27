@@ -12,8 +12,7 @@ html {
   color: #102a42;
 }
 
-body {
-  
+body {  
   display: grid;
   min-height: 100vh;
   font-size: $font-size-sm;
@@ -55,7 +54,7 @@ section {
 	align-items: center;
 }
 
-.header__logo{
+.header--logo{
 	display: flex;	
 	margin: 0 auto;
 }
@@ -67,7 +66,7 @@ section {
   min-width: 100%;
 }
 
-.input__task {
+.input--task {
   border: 1px solid gray;
   border-radius: $border-radius;
   height: 45px;
@@ -81,7 +80,7 @@ section {
   }
 }
 
-.edit__task {
+.edit--task {
   border: 1px solid $button-background-color;
   color: white;
   background-color: $button-background-color;
@@ -98,7 +97,7 @@ section {
   }
 }
 
-.alert__input {
+.alert--input {
   border-radius: $border-radius;
   padding: 5px;
   text-align: center;
@@ -113,7 +112,7 @@ section {
 	}
 }
 
-.tasks__container {
+.tasks--container {
   min-width: 100%;
 	visibility: hidden;
 	margin: 35px auto;
@@ -123,7 +122,7 @@ section {
 	}
 }
 
-.task__item {
+.task--item {
   display: flex;
   justify-content: space-between;
   background-color: #ccc6be;
@@ -132,7 +131,7 @@ section {
 	margin-bottom: 10px;
 }
 
-.task__done_btn {
+.task--edit_btn {
   background-color: $button-background-color;
   border-radius: 10px;
   color: white;
@@ -142,7 +141,7 @@ section {
   }
 }
 
-.task__btn_size {
+.task--btn_size {
   padding: 5px;
   background-color: $button-background-color;
   border-radius: 10px;
@@ -153,24 +152,29 @@ section {
   }
 }
 
-.button__done_icon::before {
+.button--edit_icon::before {
   content: "\2714";
 }
 
-.button__delete_icon::before {
+.button--delete_icon::before {
   content: "\2716";
 }
 
-.button__done-text,
-.button__delete-text {
+.button--edit-text,
+.button--delete-text {
   margin: 5px;
 }
 
-.clean__items{
+.clean--items{
+	display: none;
 	margin: 0 auto;
+
+	&[data-status="show"] {
+		display: block;
+	}
 }
 
-.clean__items_btn {
+.clean--items_btn {
   height: 80px;
 	width: 120px;
   box-sizing: border-box;
@@ -180,6 +184,6 @@ section {
 	}
 }
 
-.clean__items_icon {
+.clean--items_icon {
   margin: 0 auto;
 }
